@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    background-color: #081b31;
+    color: white;
+    height: 5rem;
+    line-height: 5rem;
+    text-align: center;
+}
+h3{ background-color: #081b31;
+    color: white;
+    width:250px;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.choice{
+    height: 155px;
+    width: 155px;
+    border-radius: 50%;
+}
+img{
+    height: 150px;
+    width: 150px; 
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: -10;
+}
+.choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    margin-top: 5rem;
+}
+img:hover{
+    transform:scale(1.1);
+    opacity: .7;
+    cursor: pointer;
+    z-index: -1000;
+}
+.scoreBoard{
+    display: flex;
+   justify-content:space-evenly;
+   font-weight: 600;
+   font-size: 2rem;
+    margin-top: 3rem;
+    gap: 5rem;
+}
+.ucompScore{
+    text-align: center;
+
+}
+#userScore, #compScore{
+    font-size: 4rem;
+    font-weight: 800;
+    text-align: center;
+}
+.mdgContainer{
+    text-align: center;
+}
+#msg{
+    display:inline-block;
+    background-color: #081b31;
+    color: white;
+    height: 4rem;
+    font-size: 2rem;
+    margin-top: 4.5em;
+    line-height: 4rem;
+    padding: .4rem .5rem;
+    border-radius: 15px;
+}
+.start{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+}
+#resetBtn{
+    background-color: rgb(48, 48, 138);
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: .4rem .5rem;
+    border-radius: 15px;
+}
+#resetBtn:hover{
+    background-color: blue;
+}
+#resetBtn:active{
+    background-color: rgba(0, 0, 255, 0.9);
+    box-sizing: 0 5px;
+    transform: translateY(4px);
+}
+#startbutton{
+    background-color: green;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: .4rem .5rem;
+    border-radius: 15px;
+}
+#startbutton:hover{
+    background-color: rgb(46, 198, 46);
+}
+#startbutton:active{
+    background-color: rgba(27, 253, 27, 0.955);
+    box-sizing: 0 5px;
+    transform: translateY(4px);
+}
+.msgSelect{
+    position: relative;
+}
+.gameIntro{
+    display: block;
+    z-index: 100000;
+    position: absolute;
+    color: #333333;
+    background-color: #FFA500;
+    height: 300px;
+    width: 700px;
+    margin-top: 100px;
+    margin-left: 25%;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    box-sizing:content-box ;
+    box-shadow: 1.3px 1.3px #e29507;
+}
+.text{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-family: monospace;
+    padding: 1rem 0;
+    width: 100%;
+    word-wrap: break-word;
+    animation:cursor 1s infinite;
+}
+@keyframes cursor {
+    50%{
+        border-color: transparent;
+    }
+   
+}
+.gameStarter{
+    position: relative;
+    display: none;
+    left:40%;
+
+}
+.selectScore{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40%;
+    height: 400px;
+    width:fit-content;
+    background-color: beige;
+    position: absolute;
+    flex-direction: column;
+    gap: 2rem;
+}
+.gameStarter.animate{
+    display: block;
+    color: white;
+    margin-top: 4rem;
+    margin-left:-50px;
+    background-color: #1E90FF;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: .5rem 1rem;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 1.3px 1.3px rgb(16, 108, 16);
+    animation: show 1.5s ease-in-out;
+
+}
+@keyframes show {
+    0%{
+        transform: translateY(30px);
+        opacity: .1;
+    }
+    25%{
+        opacity: .5;
+    }
+    50%{
+        opacity: .8;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+}
+.gameStarter.animate:hover{
+    background-color: #0180ff;
+    transform: translateY(2px);
+    transform: scale(1.06);
+}.gameStarter.animate:active{
+    transform: scaleX(1.15);
+}
+.winnerShown{
+    position: absolute;
+    margin-left: 30%;
+}
+.winners{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 238, 231);
+    height: 12rem;
+    width: 40rem;
+    border-radius: 10px;
+    position: relative;
+    display: none;
+}
+.winP{
+    position: absolute;
+    z-index: 1000;
+    font-size: 2rem;
+    font-weight: 800;
+    color: black;
+    text-align: center;
+    display: none;
+}
+.loseP{
+    position: absolute;
+    z-index: 1000;
+    font-size: 2rem;
+    font-weight: 800;
+    color: black;
+    text-align: center;
+    display: none;
+}
+.sad{
+    height: 2rem;
+    width: 2rem;
+    object-fit: cover;
+}
+.happy{
+    height: 2rem;
+    width: 2rem;
+    object-fit: cover;
+    animation: bounce 1s ease-in;
+}
+@keyframes bounce {
+    100% {
+        transform: translateY(0);
+    }
+    99.9%{
+        transform: scaleX(1.01);
+    }
+    0%{
+        transform: translateY(-90px);
+    }
+    45%{
+        transform: translateY(0);
+        transform: scaleX(1.2);
+    }
+    75%{
+        transform: translateY(-50px);
+    }
+    
+ 
+}
+.scrBtn{
+    background-color:rgba(218, 218, 19, 0.396) ;
+    width:250px;
+    height: 3rem;
+    padding: .3rem .4rem;
+    margin: .2rem .9rem;
+    font-size: 2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 5px 5px rgba(42, 42, 23, 0.396)  ;
+}
+.scrBtn:hover{
+    color: whitesmoke;
+    transform: translateY(2px);
+    transform: scale(1.06);
+}
+.scrBtn:active{
+    transform: scaleX(1.15);
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCK PAPER SCISSOR</title>
+    <link rel="stylesheet" href="rockPaperScissor.css">
+</head>
+<body>
+    <h1>ROCK PAPER SCISSORS</h1>
+
+    <div class="gameIntro">
+            <h4 class="text" id="printed-text">HEY!,</h4>
+            <button class="gameStarter">Let's Play! Start!</button>
+       
+
+    </div><!-- end of game intro-->
+    
+
+
+    <div class="msgSelect">
+    
+
+        <div class="selectScore">
+            <h3>SELECT SCORE</h3>
+            <button class="scrBtn" id="10">10</button>
+            <button class="scrBtn" id="15">15</button>
+            <button class="scrBtn" id="20">20</button>
+        </div>
+
+        <div class="winnerShown">
+            <div class="winners">
+                <p class="winP">CONGRAGULATION! YOU WON <img class="happy" src="/images/happy_187134.png"></p> 
+                <p class="loseP">YOU LOST! TRY AGAIN <img class="sad" src="/images/sad_166520.png"></p>
+            </div>
+        </div>
+
+
+        <div class="choices">
+            <div class="choice" id="rock">
+                <img src="/images/rock.png">
+            </div>
+
+            <div class="choice" id="paper">
+                <img src="/images/paper.png">
+            </div>
+
+            <div class="choice" id="scissors">
+                <img src="/images/scissors.png">
+            </div>
+        </div><!--end choices-->
+        
+       
+
+
+        <div class="scoreBoard">
+            <div class="score">
+                <p id="userScore">0</p>
+                <p class="u&compScore">YOU</p>
+            </div>
+
+            <div class="score">
+                <p id="compScore">0</p>
+                <p class="ucompScore">COMPUTER</p>
+            </div>
+        </div><!--end scoreboard-->
+
+    </div><!-- end mgselect-->
+    
+       
+
+
+        <div class="mdgContainer">
+            <p id="msg">PLAY YOUR MOVE</p>
+        </div>
+
+   
+
+    <div class="start">
+        <button id="resetBtn">RESET</button>
+        <button id="startbutton">START</button>
+    </div>
+    <script src="rockPaperScissor.js"></script>
+</body>
+</html>
